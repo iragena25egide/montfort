@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { RiTwitterXFill } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 
@@ -48,8 +49,8 @@ const Footer = () => {
         <div className="w-full md:w-1/4 flex justify-between items-center space-x-4">
           <FaFacebook color="#FEFEFE" size={22} cursor={'pointer'}/>
           <Link to={'https://www.instagram.com/'} target='_blank'> <FaInstagram color="#FEFEFE" size={22} cursor={'pointer'}/></Link>
-          <RiTwitterXFill color="#FEFEFE" size={22} cursor={'pointer'}/>
-          <FaYoutube color="#FEFEFE" size={22} cursor={'pointer'}/>
+         <Link to={'montfortss99@gmail.com'}><MdEmail color="#FEFEFE" size={22} cursor={'pointer'}/></Link> 
+          <Link to={'https://www.youtube.com/@MontfortRwanda1'}><FaYoutube color="#FEFEFE" size={22} cursor={'pointer'}/></Link> 
         </div>
       </div>
 
