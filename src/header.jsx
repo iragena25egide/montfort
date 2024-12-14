@@ -29,15 +29,17 @@ const Header = () => {
       {/* Header Container */}
       <div className="flex justify-between items-center px-4 md:px-8 py-4">
         {/* Left Container */}
-        <div className="flex items-center">
-          <img
+        <div className="flex items-center ">
+            <Link to={'/'}> <img
             src="/image/logo.jpg"
             alt="Logo"
             className="h-10 md:h-16 object-contain rounded-full"
-          />
-          <h4 className="text-xl md:text-2xl text-gray-200 ml-4 font-bold cursor-pointer font-sulphur">
+          /></Link>
+         
+         <Link to={'/'}><h4 className="text-xl md:text-2xl text-gray-200 ml-4 font-bold cursor-pointer font-sulphur">
             Montfort Secondary School
-          </h4>
+          </h4></Link>
+          
         </div>
 
         {/* Mobile Menu Toggle */}

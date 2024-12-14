@@ -16,7 +16,7 @@ const Experience = () => {
 
   return (
     <div className="experience-container p-4 md:p-8 bg-gray-100 ">
-      <h2 className="text-center text-3xl font-bold mb-8 text-gray-800">
+      <h2 className="text-center text-3xl font-bold mb-8 text-gray-800 font-sulphur">
         Student Experiences
       </h2>
       {/* Swiper Carousel */}
@@ -37,7 +37,7 @@ const Experience = () => {
                 className="h-40 w-40 object-cover rounded-full shadow-md mb-4 md:mb-0 md:mr-6"
               />
               <div className="text text-center  md:text-left w-full">
-                <p className="text-gray-600 text-lg leading-relaxed">{item.text}</p>
+                <p className="text-gray-600 text-lg leading-relaxed font-sulphur">{item.text}</p>
               </div>
             </div>
           </SwiperSlide>
