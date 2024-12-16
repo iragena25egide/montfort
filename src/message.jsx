@@ -1,8 +1,14 @@
-import React from "react";
+import React,{useEffect} from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Message = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
   return (
-    <div className="message-container flex flex-col md:flex-row items-center justify-between p-12 md:p-8 bg-gray-100 shadow-lg rounded-lg">
+    <div className="message-container flex flex-col md:flex-row items-center justify-between p-12 md:p-8 bg-gray-100 shadow-lg rounded-lg" data-aos="fade-up">
       {/* Text Section */}
       <div className="text md:w-full p-4 text-center md:text-left">
         <h4 className="text-2xl font-bold text-gray-800 mb-4 md:text-2xl font-sulphur">

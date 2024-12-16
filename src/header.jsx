@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 p-2 transition-all duration-300 ${
-        isScrolled ? "bg-gray-900 shadow-md" : "bg-gray-900 bg-opacity-90"
+        isScrolled ? "bg-gray-900 shadow-md" : "bg-gray-900 bg-opacity-99"
       }`}
     >
       {/* Header Container */}
@@ -91,12 +91,12 @@ const Header = () => {
           } md:block`}
         >
           <ul className="flex flex-col md:flex-row md:items-center md:space-x-8 text-gray-200 font-semibold text-base">
-            {/* OUR SCHOOL with Dropdown */}
+          
             <li className="relative group cursor-pointer hover:text-gray-300 transition duration-300 font-sulphur">
               OUR SCHOOL
               {/* Dropdown */}
               <div
-                className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg text-black z-10 opacity-0 group-hover:opacity-100 
+                className="absolute left-0 mt-0 w-40 bg-white shadow-lg rounded-lg text-black z-10 opacity-0 group-hover:opacity-100 
                   pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300"
               >
                 <ul className="flex flex-col p-2 space-y-2">

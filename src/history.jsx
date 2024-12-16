@@ -1,6 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const History = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
   return (
     <section className="container mx-auto py-16 px-4 md:px-8 mt-20">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8 font-sulphur">
@@ -17,7 +22,7 @@ const History = () => {
         </div>
 
         {/* Text Section */}
-        <div className="w-full md:w-1/2 md:pl-8 text-center md:text-left">
+        <div className="w-full md:w-1/2 md:pl-8 text-center md:text-left" data-aos="fade-up">
           <p className="text-lg leading-relaxed text-gray-700 mb-4 font-sulphur">
             <strong>Montfort Secondary School, Nyamata</strong>, was founded by 
             the Montfort Brothers of St. Gabriel, a Catholic congregation known 

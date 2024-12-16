@@ -1,48 +1,150 @@
-import React from 'react';
+import React, { useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Autoplay } from "swiper/modules"; 
+import "aos/dist/aos.css";
+import AOS from "aos";
 
-const Gallery = () => {
-  const images = [
-    "/image/student.jpg",
-    "/image/student1.jpg",
-    "/image/student2.jpg",
-    "/image/student6.jpg",
-    "/image/student.jpg",
-    "/image/student5.jpg",
-    "/image/student5.jpg",
-  ];
+export default function Explore() {
+ 
+  useEffect(() => {
+    AOS.init({ duration: 2000, easing: "ease-in-out", once: true });
+  }, []);
 
   return (
-    <div className="container mx-auto p-4">
-      <h2 className="text-center text-3xl font-bold mb-8 text-gray-800 font-sulphur">
-        Montfort School Gallery
+    <div
+      className="bg-gray-100 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-8"
+      data-aos="fade-up"
+    >
+    
+      <h2
+        className="font-bold text-xl sm:text-2xl md:text-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text mb-6 font-sulphur"
+        data-aos="fade-down" 
+      >
+        Explore More
       </h2>
-      {/* Gallery Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {images.map((image, index) => (
-          <div key={index} className="relative group">
-            {/* Image */}
+
+   
+      <Swiper
+        slidesPerView={2} 
+        spaceBetween={30} 
+        loop={true}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination, Autoplay]} 
+        className="mySwiper w-full sm:w-10/12 md:w-full"
+      >
+
+      <SwiperSlide>
+          <div
+            className="relative group"
+            data-aos="fade-up" 
+            data-aos-delay="200"
+          >
             <img
-              src={image}
-              alt={`Gallery Image ${index + 1}`}
-              className="w-full h-full object-cover rounded-lg transition-all duration-300 transform group-hover:scale-105"
+              src="/image/block.jpg"
+              alt="Example 1"
+              className="full h-[350px] sm:h-[400px] md:h-[450px]  p-8 rounded-lg object-cover"
             />
-            {/* Overlay content (hidden by default) */}
-            <div className="absolute inset-0 bg-black bg-opacity-20 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0">
+      
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className="relative group"
+            data-aos="fade-up" 
+            data-aos-delay="200"
+          >
+            <img
+              src="/image/com.jpg"
+              alt="Example 1"
+              className="full h-[350px] sm:h-[400px] md:h-[450px]  p-8 rounded-lg object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0">
+      
+            </div>
+          </div>
+        </SwiperSlide>
+      
+        <SwiperSlide>
+          <div
+            className="relative group"
+            data-aos="fade-up" 
+            data-aos-delay="200"
+          >
+            <img
+              src="/image/friend.jpg"
+              alt="Example 1"
+              className="full h-[350px] sm:h-[400px] md:h-[450px]  p-8 rounded-lg object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0">
+      
+            </div>
+          </div>
+        </SwiperSlide>
+
+       
+        <SwiperSlide>
+          <div
+            className="relative group"
+            data-aos="fade-up" 
+            data-aos-delay="400"
+          >
+            <img
+              src="/image/girl.jpg"
+              alt="Example 2"
+              className="w-full h-[350px] sm:h-[400px] md:h-[450px]  p-8 rounded-lg object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 ">
+            
+            </div>
+          </div>
+        </SwiperSlide>
+
+        {/* Slide 3 */}
+        <SwiperSlide>
+          <div
+            className="relative group"
+            data-aos="fade-up" 
+            data-aos-delay="200"
+          >
+            <img
+              src="/image/play.jpg"
+              alt="Example 3"
+              className="w-full h-[350px] sm:h-[400px] md:h-[450px]  p-8 rounded-lg object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center opacity-0 ">
              
             </div>
           </div>
-        ))}
-      </div>
+        </SwiperSlide>
 
-      {/* View More Button */}
-      <div className="flex justify-center mt-8">
-      <button className="px-8 py-3 bg-gray-800 font-sulphur text-white font-semibold rounded-lg shadow-lg transition-all duration-300 hover:bg-gray-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50">
-  View More Images
-</button>
-
-      </div>
+        {/* Slide 4 */}
+        <SwiperSlide>
+          <div
+            className="relative group"
+            data-aos="fade-up" // Animation on scroll
+            data-aos-delay="400"
+          >
+            <img
+              src="/image/visitor.jpg"
+              alt="Example 4"
+              className="w-full h-[350px] sm:h-[400px] md:h-[450px] p-8 border-[10px_10px_20px_20px]  object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center opacity-0 ">
+             
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
-};
-
-export default Gallery;
+}

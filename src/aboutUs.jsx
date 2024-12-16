@@ -1,6 +1,12 @@
-import React from "react";
+import React,{useEffect} from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AboutUs = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
   return (
     <section className="container mx-auto py-16 px-4 md:px-8 mt-20">
       <div className="flex flex-col md:flex-row items-center md:items-start">
@@ -14,7 +20,7 @@ const AboutUs = () => {
         </div>
         
         {/* Text Section */}
-        <div className="w-full md:w-1/2 md:pl-8 text-center md:text-left">
+        <div className="w-full md:w-1/2 md:pl-8 text-center md:text-left" data-aos="fade-down">
           <h2 className="text-3xl md:text-4xl font-sulphur mb-6 text-gray-800">About Us</h2>
           <p className="text-1xl font-sulphur leading-relaxed text-gray-700 mb-4">
             <strong>Montfort Secondary School, Nyamata</strong>, is a prestigious institution in Rwanda 

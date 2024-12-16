@@ -1,6 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ContactUs = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); 
+  }, []);
   return (
     <div className="container mx-auto p-8 mt-20">
       <h2 className="text-center text-3xl font-sulphur mb-8 text-gray-900">
@@ -18,7 +23,7 @@ const ContactUs = () => {
         </div>
 
         {/* Head Master Information Section */}
-        <div className=" p-6 rounded-lg ">
+        <div className=" p-6 rounded-lg " data-aos="fade-down">
           <h3 className="text-xl font-bold text-gray-800 mb-4 font-sulphur">
             Head Master Information
           </h3>
@@ -31,15 +36,15 @@ const ContactUs = () => {
           <p className="text-gray-700 text-lg mt-2">
             <span className="font-semibold font-sulphur">Email:</span>{" "}
             <a
-              href="mailto:headmaster@gloryacademy.com"
+              href="mailto:montfortss99@gmail.com"
               className="text-blue-500 hover:underline font-sulphur"
             >
-              headmaster@gmail.com
+              montfortss99@gmail.com
             </a>
           </p>
           <p className="text-gray-700 text-lg mt-2">
             <span className="font-semibold font-sulphur">Phone:</span>{" "}
-            <a href="tel:+1234567890" className="text-blue-500 hover:underline font-sulphur">
+            <a href="tel:+250 789 808 847" className="text-blue-500 hover:underline font-sulphur">
             +250 789 808 847
             </a>
           </p>

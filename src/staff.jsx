@@ -1,4 +1,6 @@
-import React from "react";
+import React,{useEffect} from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const staffData = [
   {
@@ -58,6 +60,14 @@ const staffData = [
     description: "Oversees the management of school supplies and inventory records.",
   },
   {
+    id:11,
+    name:"MUSHIMIYIMANA Slyvie",
+    role:"Librarian",
+    image:"/image/librarian.jpg",
+    phone:"+250 783 061 769",
+    description:"Overlooking all about school library,books and other documents to be used by used in they study that related to lesson."
+  },
+  {
     id: 8,
     name:"NTIRIBINYANGE Dione",
     role: "Patron",
@@ -76,6 +86,10 @@ const staffData = [
 ];
 
 const Staff = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 2000, easing: "ease-in-out", once: true });
+  }, []);
   return (
     <section className="bg-gray-50 py-16 px-4 md:px-8 mt-20">
       <div className="max-w-7xl mx-auto">
@@ -84,11 +98,11 @@ const Staff = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {staffData.map((staff) => (
-            <div key={staff.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div key={staff.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"  data-aos="fade-up">
               <img
                 src={staff.image}
                 alt={staff.name}
-                className="h-52 w-full object-cover"
+                className="h-[60%] w-full object-cover p-4 rounded-lg"
               />
               <div className="p-4">
                 <h3 className="text-1xl font-semibold font-sulphur text-blue-700 mb-2">{staff.name}</h3>
